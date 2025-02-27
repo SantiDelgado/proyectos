@@ -44,7 +44,7 @@ public class Main {
                     System.out.println("El nombre con más vocales es: " + nombreMasVocales);
                     break;
                 case 6:
-                    ArrayList<String> nombresPalindromos = encontrarNombresPalindromos(boys);
+                    ArrayList<String> nombresPalindromos = NombresPalindromos(boys);
                     System.out.println("Los nombres palíndromos son: " + nombresPalindromos);
                     break;
                 case 7:
@@ -203,27 +203,24 @@ public class Main {
         return contadorVocales;
     }
     public static boolean esPalindromo(String nombre) {
-        // 1. Eliminar espacios y convertir a minúsculas
-        String nombreLimpio = nombre.replaceAll("\\s", "").toLowerCase();
+        // Eliminar espacios y convertir a minúsculas
+        String nombreNormal = nombre.replaceAll("\\s", "").toLowerCase();
 
-        // 2. Comparar caracteres desde el inicio y el final hacia el centro
-        int izquierda = 0; // Puntero al inicio del nombre
-        int derecha = nombreLimpio.length() - 1; // Puntero al final del nombre
+        // Comparar caracteres desde el inicio y el final hacia el centro
+        int inicio = 0; // inicio del nombre
+        int fin = nombreNormal.length() - 1; // final del nombre
 
-        while (izquierda < derecha) {
-            // 3. Comparar los caracteres en las posiciones izquierda y derecha
-            if (nombreLimpio.charAt(izquierda) != nombreLimpio.charAt(derecha)) {
+        while (inicio < fin) {
+            // Comparar los caracteres en las posiciones izquierda y derecha
+            if (nombreNormal.charAt(inicio) != nombreNormal.charAt(fin)) {
                 return false; // No es palíndromo
             }
-            // 4. Mover los punteros hacia el centro
-            izquierda++;
-            derecha--;
+            inicio++;
+            fin--;
         }
-
-        // 5. Si todos los caracteres coinciden, es palíndromo
         return true;
     }
-    public static ArrayList<String> encontrarNombresPalindromos(ArrayList<Children> boys) {
+    public static ArrayList<String> NombresPalindromos(ArrayList<Children> boys) {
         ArrayList<String> nombresPalindromos = new ArrayList<>(); // Lista para almacenar los nombres palíndromos
 
         // Recorrer la lista de niños
@@ -237,7 +234,6 @@ public class Main {
 
         return nombresPalindromos; // Devolver la lista de nombres palíndromos
     }
-
     public static int contarConsonantes(String nombre) {
         int contadorConsonantes = 0;
         String nombreMinusculas = nombre.toLowerCase(); // Convertir a minúsculas para simplificar
