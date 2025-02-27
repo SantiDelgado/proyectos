@@ -63,7 +63,7 @@ public class Main {
                             /**
                              * int contador = 1;
                              * for (Estudiante est : estudiantes) {
-                             *     System.out.println(contador + ". " + est);
+                             *     System.out.println(contador + ". " + est );
                              *     contador++;
                              * }
                              * imprimir por lista con el for each
