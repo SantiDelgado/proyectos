@@ -1,20 +1,19 @@
 package org.example;
 
 public class Children {
-     String nombre;
-     int edad;
-     String genero;
-     String identificacion;
-     String alergias;
-     String nombreAcudiente;
-     String numeroAcudiente;
+     private String nombre;
+     private int edad;
+     private String genero;
+     private String identificacion;
+     private String alergias;
+     private String nombreAcudiente;
+     private String numeroAcudiente;
 
 
      //Metodo constructor
 
      public Children(String nombre, int edad, String genero, String identificacion, String alergias,
                      String nombreAcudiente, String numeroAcudiente) {
-
           this.nombre = nombre;
           this.edad = edad;
           this.genero = genero;
