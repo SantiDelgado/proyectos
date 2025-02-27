@@ -71,7 +71,6 @@ public class Main {
     }
     public static void agregarBoy(ArrayList<Children>boys, Scanner scanner) {
         System.out.println("Ingrese datos del niño: ");
-
         System.out.println("Ingrese el nombre: ");
         String nombre = scanner.nextLine();
 

@@ -9,6 +9,7 @@ public class Children {
      String nombreAcudiente;
      String numeroAcudiente;
 
+
      //Metodo constructor
 
      public Children(String nombre, int edad, String genero, String identificacion, String alergias,
